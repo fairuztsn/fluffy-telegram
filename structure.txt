@@ -1,0 +1,29 @@
+project_name/
+│
+├── data/                           # Menyimpan semua data yang digunakan dalam proyek
+│   ├── images/                     # Folder berisi gambar
+│   │   ├── train/                  # Folder gambar untuk training
+│   │   └── test/                   # Folder gambar untuk testing (jika diperlukan)
+│   └── data.csv                    # CSV file berisi informasi gambar (id, jenis, warna)
+│
+├── src/                            # Menyimpan kode sumber atau script Python
+│   ├── datasets/                   # Folder berisi class dataset kustom
+│   │   ├── __init__.py             # Inisialisasi folder datasets sebagai package Python
+│   │   └── custom_dataset.py       # Dataset class (CustomImageDatasetFromCSV)
+│   ├── transforms/                 # Menyimpan transformasi dan augmentasi data
+│   │   ├── __init__.py             # Inisialisasi folder transforms sebagai package Python
+│   │   └── image_transforms.py     # Script transformasi (misal ToTensor, Resize, dll.)
+│   ├── models/                     # Folder untuk model yang akan dilatih
+│   │   ├── __init__.py             # Inisialisasi folder models sebagai package Python
+│   │   └── custom_model.py         # Implementasi model (misal CNN, ResNet, dll.)
+│   └── train.py                    # Script utama untuk melatih model
+│
+├── notebooks/                      # Folder berisi Jupyter notebooks
+│   └── data_exploration.ipynb      # Notebook untuk eksplorasi dan analisis data awal
+│
+├── checkpoints/                    # Folder untuk menyimpan model yang sudah dilatih
+│   └── model.pth                   # Contoh model yang sudah disimpan
+│
+├── requirements.txt                # File dependencies proyek (misal: torch, torchvision, pandas)
+├── README.md                       # Dokumentasi proyek
+└── config.yaml                     # File konfigurasi (misal: hyperparameter, path data, dll.)
